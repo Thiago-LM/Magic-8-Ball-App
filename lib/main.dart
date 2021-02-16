@@ -48,6 +48,12 @@ class _BallState extends State<Ball> {
   int ballNumber = 1;
 
   @override
+  void initState() {
+    ballNumber = Random().nextInt(5) + 1;
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: FlatButton(
